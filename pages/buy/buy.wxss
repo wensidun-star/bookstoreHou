@@ -1,0 +1,143 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6FA;
+}
+.bookInfo{
+  width: 750rpx;
+  height: 250rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.booimg{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 24rpx;
+  margin-left: 24rpx;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+.book{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bookName{
+  font-size: 16px;
+  color: #383E4A;
+  margin-top: 24rpx;
+}
+.bookPrice{
+  font-size: 20px;
+  color: red;
+  margin-bottom: 24rpx;
+}
+.inputNum{
+  margin-top: 160rpx;
+}
+.price{
+  width: 750rpx;
+  height: 150rpx;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+.onePrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #383E4A;
+}
+.sendPrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #383E4A;
+}
+.oneMoney,.sendMoney{
+  margin-left: 24rpx;
+  margin-top: 16rpx;
+}
+.oneM,.sendM{
+  margin-right: 24rpx;
+  margin-top: 16rpx;
+}
+.allPrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #ffffff;
+}
+.allprice{
+  margin-right: 24rpx;
+  font-size: 16px;
+  color: #383E4A;
+}
+.toSail{
+  margin-top: 16rpx;
+}
+.all{
+  margin-top: 16rpx;
+}
+.iconxiugai,.iconshanchu{
+  font-size: 16px;
+  color: #ccc;
+}
+.localItem{
+  width: 750rpx;
+  height: 150rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.username{
+  font-size: 16px;
+  margin-left: 16rpx;
+  margin-top: 24rpx;
+}
+.baseIntro{
+  margin-right: 16rpx;
+  margin-top: 24rpx;
+}
+.intro{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-left: 16rpx;
+}
+.localIntro{
+  margin-top: 16rpx;
+  font-size: 16px;
+  margin-left: 24rpx;
+}
+.handle{
+  font-size: 16px;
+  margin-left: 16rpx;
+}
+.del{
+  margin-top: 16rpx;
+  color: red;
+}
+.iconjia{
+  color: #1296db;
+  font-size: 70px;
+}
+.enter{
+  background-color: #5689FF;
+  color: #ffffff;
+  font-size: 24px;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

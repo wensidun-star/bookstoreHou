@@ -1,0 +1,29 @@
+<!--主盒子-->
+<view class="container">
+  <!--左侧栏-->
+  <view class="nav_left">
+    <block wx:for="{{cateItems}}">
+      <!--当前项的id等于item项的id，那个就是当前状态-->
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="nav_left_items {{curNav == item.categoryid ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.categoryid}}">{{item.categoryname}}</view>
+    </block>
+  </view>
+  <!--右侧栏-->
+  <view  class='nav_right'>
+    <view class="nav_right_items" wx:for="{{bookList}}" wx:for-index="key" id='{{key}}' bindtap='gotoInfo'>
+    <view class='bookItem'>
+      <view><image class='bookImg' src="{{item.bookimg}}"></image></view>
+      <view class='bookName'><text>{{item.bookname}}</text></view>
+    </view>
+      
+    </view>
+  </view>
+</view>
+<view class='tabLow'>
+  <i-tab-bar current="{{ current }}" color="#5689FF" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="category" icon="service" current-icon="service_fill" title="商城"></i-tab-bar-item>
+    <i-tab-bar-item key="wash" icon="interactive" current-icon="interactive_fill" title="淘书"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+</view>

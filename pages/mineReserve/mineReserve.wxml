@@ -1,0 +1,5 @@
+<view class='card' wx:for="{{bookList}}" wx:key="{{item}}"  bindlongtap='enter'>
+  <i-card title="{{item.bookname}}" extra="数量：{{item.reversenum}}" thumb="{{item.bookimg}}">
+    <view slot="content">图书价格：{{item.bookprice}}</view>
+  </i-card>
+</view>

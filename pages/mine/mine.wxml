@@ -1,0 +1,37 @@
+<view style="margin-top:24rpx;border-bottom:1px solid #f0f0f0;">
+  <i-cell>
+  <view class='top'>
+    <image src='{{userimg}}' class='userimg'></image>
+    <view class='username'><text>{{username}}</text></view>
+  </view>    
+  </i-cell>
+</view>
+
+<view style="margin-top:24rpx;border-bottom:1px solid #f0f0f0;" bindtap='gotoLocal'>
+  <i-cell title="我的地址" is-link></i-cell>
+</view>
+<view style="border-bottom:1px solid #f0f0f0;" bindtap='gotoCollection'>
+  <i-cell title="我的收藏" is-link></i-cell>
+</view>
+<view style="border-bottom:1px solid #f0f0f0;" bindtap='gotoReserve'>
+  <i-cell title="我的预定" is-link></i-cell>
+</view>
+<view style="border-bottom:1px solid #f0f0f0;" bindtap='gotoSend'>
+  <i-cell title="我的配送" is-link></i-cell>
+</view>
+<!-- <view >
+  <i-cell title="我的签到" is-link></i-cell>
+</view> -->
+<view class='button'>
+  <i-button bind:click="handleClick" type="error">退出登录</i-button>
+</view>
+<view class='tabLow'>
+  <i-tab-bar current="{{ current }}" color="#5689FF" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="category" icon="service" current-icon="service_fill" title="商城"></i-tab-bar-item>
+    <i-tab-bar-item key="wash" icon="interactive" current-icon="interactive_fill" title="淘书"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+</view>
+
+

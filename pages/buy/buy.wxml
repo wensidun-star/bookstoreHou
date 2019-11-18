@@ -1,0 +1,63 @@
+<i-notice-bar icon="systemprompt" loop>
+    本店只支持预定和配送货到付款
+</i-notice-bar>
+<view class='bookInfo'>
+  <view class='booimg'><image class='img' src='{{bookimg}}'></image></view>
+  <view class='book'>
+    <view class='bookName'><text>{{bookname}}</text></view>
+    <view class='bookPrice'><text>¥{{bookprice}}</text></view>
+  </view>
+  <view class='num'>
+    <view class='inputNum'>
+      <i-input-number value="{{ buyNum }}" min="1" max="100" bindchange="handleChange1" />
+    </view>
+  </view>
+</view>
+<view class='price'>
+  <view class='onePrice'>
+    <view class='oneMoney'><text>商品金额</text></view>
+    <view class='oneM'><text>¥{{bookprice}}</text></view>
+  </view>
+  <view class='sendPrice'>
+    <view class='sendMoney'><text>配送金额</text></view>
+    <view class='sendM'><text>¥{{sendprice}}</text></view>
+  </view>
+</view>
+<view class='allPrice'>
+  <view class='null'></view>
+  <view class='allprice'><text>实付款 ¥{{allPrice}}</text></view>
+</view>
+<view class='toSail'><i-input value="{{ value3 }}" type="textarea" title="买家留言" placeholder="" /></view>
+<view class='all'>
+  <view class='localItem'>
+    <view class='intro'>
+    <view class='username'><text>收货人：{{username}}</text></view>
+      <view class='baseIntro'>
+        <text>{{phone}}</text>
+      </view>
+      
+    </view>
+    <view class='localIntro'>
+    <i-icon type="coordinates_fill" size='20' color='#ccc'/>
+        <text>{{local}}</text>
+    </view>
+  </view>
+</view>
+<map id="myMap"
+    markers="{{markers}}"
+    style="width:100%;height:180px;"
+    longitude="{{poi.longitude}}"
+    latitude="{{poi.latitude}}"
+    scale='16' show-location>
+</map>
+<view class='enter' bindtap='yes'>
+  <text>确认配送</text>
+</view>
+
+<i-modal title="确认订单" visible="{{ visible1 }}" bind:ok="enter" bind:cancel="cancel">
+  <view class='modal'>
+    <view class='mbookName'><text>图书名称：{{bookname}}</text></view>
+    <view class='mbookName'><text>图书数量：{{buyNum}}</text></view>
+    <view class='mbookPrice'><text>总价格：¥{{allPrice}}</text></view>
+  </view>
+</i-modal>

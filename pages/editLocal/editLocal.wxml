@@ -1,0 +1,16 @@
+<view class="top">
+  <view class='iconuser'><i-icon type="group_fill" size='20' /></view>
+  <view class='user'><text>联系人</text></view>
+</view>
+<view class='userItem'>
+  <view class='username'><i-input value="{{ sendname }}" title="收货人" autofocus placeholder="名字" maxlength='20' bind:change="sendname"/></view>
+  <view class='phone'><i-input value="{{ sendphone }}" type="number" title="联系电话" placeholder="请输入手机号"  maxlength='11' bind:change="sendphone"/></view>
+</view>
+<view class="top">
+  <view class='iconuser'><i-icon type="coordinates_fill" size='20'/></view>
+  <view class='user'><text>详细地址</text></view>
+</view>
+<view class='userItem1'>
+  <view><i-input value="{{ localname }}" type="textarea" title="详细地址" placeholder="请输入详细地址" bind:change="localname"/></view>
+</view>
+<view class='button'><i-button bind:click="handleClick" type="primary">确认修改</i-button></view>

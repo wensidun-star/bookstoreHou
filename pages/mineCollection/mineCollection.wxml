@@ -1,0 +1,6 @@
+<view class='all'>
+  <view class='citem' wx:for="{{bookList}}" wx:key="{{item}}" wx:for-index="key" id='{{key}}' bindtap='gotoInfo'>
+    <view class='img'><image class='bookimg' src='{{item.bookimg}}'></image></view>
+    <view class='bookname'><text>{{item.bookname}}</text></view>
+  </view>
+</view>

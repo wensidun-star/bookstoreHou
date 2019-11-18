@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-input-number": "../../dist/input-number/index",
+    "i-input": "../../dist/input/index",
+    "i-icon": "../../dist/icon/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-modal": "../../dist/modal/index"
+  },
+  "navigationBarTitleText": "选择配送"
+}

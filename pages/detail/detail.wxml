@@ -1,0 +1,58 @@
+<view class="topImg">
+  <view class='book'><image class='bookImg' src='{{bookimg}}'></image></view>
+  <view class='topBottom'>
+    <view class='left'>
+      <view class='bookPrice'><text>¥{{price}}</text></view>
+      <view class='bookName'><text>{{bookName}}</text></view>
+    </view>
+    <view class='star' bindtap='collection' wx:if="{{!ifCollection}}"><i-icon type="collection" size='28' color="red"/></view>
+    <view class='star' bindtap='collection' wx:if="{{ifCollection}}"><i-icon type="collection_fill" size='28' color="red"/></view>
+  </view>
+</view>
+<view class='intro'>
+  <view class='introName'><text>图书简介</text></view>
+  <view class='introTxt'><text>{{intro}}</text></view>
+</view>
+<view class='comment'>
+  <view class='commentTxt'><text>全部评价</text></view>
+  <view class='roteView'>
+    <view class='starNum'><text>{{rote}}</text></view>
+    <view class='starRote'>
+        <i-rate 
+            count="{{5}}"
+            value="{{starIndex}}"
+            disabled="true">
+        </i-rate>
+    </view>
+    <view class='line'></view>
+    <view class='linetxt'><text>综合评分</text></view>
+  </view>
+  <view class='commentItem' wx:for="{{commentList}}" wx:key="{{item}}">
+    <view class='itemTop'>
+      <view class='headImg'><image class='imgHead' src='{{item.userimg}}'></image></view>
+      <view class='topColumn'>
+        <view class='username'><text>{{item.username}}</text></view>
+        <view class='userRote'><i-rate 
+            count="{{5}}"
+            value="{{item.rote}}"
+            disabled="true"
+            size="12">
+        </i-rate></view>
+      </view>
+    </view>
+    <view class='itemBottom'><text>{{item.comment}}</text></view>
+  </view>
+</view>
+<view class='null'></view>
+<view class='bottom'>
+  <view class='bottomLeft' bindtap='reverse'><text>我要预定</text></view>
+  <view class='bottomRight' bindtap='send'><text>我要配送</text></view>
+</view>
+
+<i-modal title="确定要预定此图书吗？" visible="{{ visible1 }}" bind:ok="enter" bind:cancel="cancel">
+  <view class='modal'>
+    <view class='mbookName'><text>图书名称：{{bookName}}</text></view>
+    <view class='mbookPrice'><text>图书价格：¥{{bookprice}}</text></view>
+    <view class='mbookBuy'><i-input-number value="{{ buyNum }}" min="1" max="100" bindchange="handleChange1" /></view>
+  </view>
+</i-modal>

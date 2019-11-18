@@ -1,0 +1,14 @@
+<view class='card' wx:for="{{bookList}}" wx:key="{{item}}" wx:for-index="key" id='{{key}}'>
+<view wx:if="{{item.orderstate == 0}}">
+  <i-card title="{{item.bookname}}" extra="订单编号：{{item.orderid}}" thumb="{{item.bookimg}}">
+    <view slot="content">图书价格：{{item.orderprice}}</view>
+    <view slot="footer">订单状态:未完成 <i-button data-index='{{key}}' bind:click="enter" type="primary" shape="circle" size="small">确认送达</i-button></view>
+  </i-card>
+</view>
+  <view wx:if="{{item.orderstate == 1}}">
+    <i-card title="{{item.bookname}}" extra="订单编号：{{item.orderid}}" thumb="{{item.bookimg}}">
+    <view slot="content">图书价格：{{item.orderprice}}</view>
+     <view slot="footer">订单状态:已完成 <i-button data-index='{{key}}' bind:click="comment" type="primary" shape="circle" size="small">评价</i-button></view>
+  </i-card>
+  </view>
+</view>

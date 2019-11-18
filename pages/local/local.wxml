@@ -1,0 +1,20 @@
+<view class='all'>
+  <view class='localItem' wx:for="{{localList}}" wx:key="{{item}}" wx:for-index="key" id='{{key}}'>
+    <view class='username'><text>{{item.sendname}}</text></view>
+    <view class='intro'>
+      <view class='baseIntro'>
+        <text>{{item.sendphone}}</text>
+      </view>
+      <view class='localIntro'>
+        <text>{{item.localname}}</text>
+      </view>
+    </view>
+    <view class='handle'>
+      <view class='edit' bindtap='edit' data-index='{{key}}'> <text class='iconfont iconxiugai'></text><text>修改</text> </view>
+      <view class='del' bindtap='del' data-index='{{key}}'><text class='iconfont iconshanchu'></text><text>删除</text></view>
+    </view>
+  </view>
+  <view class='add' bindtap='addLocal'>
+    <text class='iconfont iconjia'></text>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<image class="img" src="http://i1.fuimg.com/678850/7a84eeceb66a906a.png"></image>
+<view class='login'>
+  <i-button bind:click="handleClick" type="primary" open-type='getUserInfo'>微信登录</i-button>
+</view>

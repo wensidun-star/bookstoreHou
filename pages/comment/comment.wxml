@@ -1,0 +1,32 @@
+<view class='top'>
+<view class='top_txt'>
+  <text>订单编号:{{orderid}}</text>
+</view>
+  
+</view>
+<view class='bookList'>
+    <view class='bookList_view'>
+      <view class='left'>
+        <image class='bookImg' src='{{bookimg}}'></image>
+      </view>
+      <view class='mid'>
+        <view class='bookName'><text>{{bookname}}</text></view>
+        <view class='bookPrice'><text>{{bookprice}}元</text></view>
+      </view>
+    </view>
+</view>
+<view class='rote'>
+  <view class='star'>
+    <i-cell title="选择评分">
+        <i-rate 
+            bind:change="onChange3" 
+            value="{{starIndex3}}">
+            {{starIndex3}}星
+        </i-rate>
+    </i-cell>
+  </view>
+</view>
+<view class='userItem1'>
+  <view><i-input value="{{ comment }}" type="textarea" title="买家评价" placeholder="请输入对商品的评价" bind:change="comment"/></view>
+</view>
+<view class='button'><i-button bind:click="handleClick" type="primary">提交评价</i-button></view>

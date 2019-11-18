@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-divider": "../../dist/divider/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-icon": "../../dist/icon/index"
+  },
+  "navigationBarTitleText": "分类"
+}

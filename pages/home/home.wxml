@@ -1,0 +1,64 @@
+<view class='top'>
+  <view class='topSearch' bindtap='gotoSearch'>
+  <view class='iconSearch'><i-icon type="search" size='24' color='#ccc'/></view>
+  <view class='searchInput'><text>搜索图书</text></view>
+</view>
+  <!-- <view class='sao'> <text class='iconfont iconsaomiao'></text> </view> -->
+</view>
+
+<swiper class='swiper' autoplay='true' interval="3000" circular="true" previous-margin="24" next-margin='24'>
+  <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+    <swiper-item>
+      <image src="{{item.bannerimg}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='bookCate'>
+  <view class='cateTop'>
+    <view class='cateTxt'><text>图书分类</text></view>
+    <view class='cateSee' bindtap='goCate'><text>查看更多</text></view>
+  </view>
+  <view class='line'></view>
+  <view class='cate'>
+  <view class='item' bindtap='selectLearn'>
+    <view><image class='cateImg' src='http://i2.tiimg.com/678850/597993d8cc138147.png'></image></view>
+    <view><text>学习书</text></view>
+  </view>
+    <view class='item' bindtap='selectNovel'>
+      <view><image class='cateImg' src='http://i2.tiimg.com/678850/2c84c6199569a915.png'></image></view>
+    <view><text>小说</text></view>
+    </view>
+    <view class='item' bindtap='selectNotes'>
+      <view><image class='cateImg' src='http://i2.tiimg.com/678850/198dadefd0c487e4.png'></image></view>
+    <view><text>杂志</text></view>
+    </view>
+    <view class='item' bindtap='selectFamous'>
+      <view><image class='cateImg' src='http://i2.tiimg.com/678850/6de89e676fcb82c5.png'></image></view>
+    <view><text>名著</text></view>
+    </view>
+    
+  </view>
+</view>
+<view class='hotBook'>
+  <view class='cateTop'>
+    <view class='cateTxt'><text>热卖图书</text></view>
+    <view class='cateSee'><text>查看更多</text></view>
+  </view>
+  <view class='line'></view>
+  <view class='book'>
+    <view class='bookItem' wx:for="{{bookList}}" wx:key="{{item}}" wx:for-index="key" id='{{key}}' bindtap='gotoInfo'>
+      <view><image class='bookimg' src='{{item.bookimg}}'></image></view>
+      <view class='bookName'> <text>{{item.bookname}}</text> </view>
+      <view class='bookPrice'><text>{{item.bookprice}}.00元</text> </view>
+    </view>
+  </view>
+</view>
+<view class='tabLow'>
+  <i-tab-bar current="{{ current }}" color="#5689FF" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="category" icon="service" current-icon="service_fill" title="商城"></i-tab-bar-item>
+    <i-tab-bar-item key="wash" icon="interactive" current-icon="interactive_fill" title="淘书"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+</view>
+

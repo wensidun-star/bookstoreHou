@@ -1,0 +1,32 @@
+<i-notice-bar icon="systemprompt" loop>
+    请不要发无关图书的信息
+</i-notice-bar>
+<i-tabs current="{{ current }}" color="#5689FF" bindchange="handleChange">
+    <i-tab key="tab1" title="未淘到"></i-tab>
+    <i-tab key="tab2" title="已淘到"></i-tab>
+</i-tabs>
+<view class='washItem' wx:for="{{washList}}" wx:key="{{item}}">
+  <view class='washTop'>
+    <view class='washImg'><image class='img' src='{{item.userimg}}'></image></view>
+    <view class='washName'><text>{{item.username}}</text></view>
+  </view>
+  <view class='washBottom'>
+    <view><text>{{item.washintro}}</text></view>
+  </view>
+</view>
+<view class='add' bindtap='addWash'>
+    <text class='iconfont iconjia'></text>
+  </view>
+<view class='kong'></view>
+<view class='tabLow'>
+  <i-tab-bar current="{{ current1 }}" color="#5689FF" bindchange="handleChange1">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="category" icon="service" current-icon="service_fill" title="商城"></i-tab-bar-item>
+    <i-tab-bar-item key="wash" icon="interactive" current-icon="interactive_fill" title="淘书"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+</view>
+
+<i-modal title="请填写淘书信息" visible="{{ visible1 }}" bind:ok="enter" bind:cancel="close">
+  <i-input value="{{ washtxt }}" title="淘书信息" placeholder="请填写淘书信息" maxlength='500' bind:change="inputWash"/>
+</i-modal>

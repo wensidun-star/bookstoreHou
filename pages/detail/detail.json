@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-rate": "../../dist/rate/index",
+    "i-modal": "../../dist/modal/index",
+    "i-input-number": "../../dist/input-number/index"
+  },
+  "navigationBarTitleText": "图书详情"
+}

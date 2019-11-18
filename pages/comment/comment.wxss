@@ -1,0 +1,61 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6FA;
+}
+.top{
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #ccc;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.top_txt{
+  margin-left: 16rpx;
+}
+.bookList_view{
+  display: flex;
+  flex-direction: row;
+  margin-top: 16rpx;
+  border-bottom: 1px solid #F6F6FA;
+  padding-bottom: 16rpx;
+  background-color: #ffffff;
+}
+.left{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left:16rpx; 
+  margin-top: 16rpx;
+}
+.bookImg{
+  width: 100%;
+  height: 100%;
+}
+.mid{
+  display: flex;
+  flex-direction: column;
+  align-items:baseline;
+  margin-left: 16rpx;
+}
+.bookName{
+  color: #383E4A;
+  font-size: 18px;
+  margin-top: 48rpx;
+}
+.bookPrice{
+  color: red;
+  font-size: 20px;
+  margin-top: 24rpx;
+}
+.rote{
+  background-color: #ffffff;
+}
+.userItem1{
+  background-color: #ffffff;
+}
+.button{
+  position: absolute;
+  bottom: 96rpx;
+  width: 750rpx;
+}

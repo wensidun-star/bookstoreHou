@@ -1,0 +1,25 @@
+<view class='top'>
+  <i-tabs current="{{ current }}" color="#f759ab" bindchange="handleChange">
+    <i-tab key="5" title="学习书"></i-tab>
+    <i-tab key="1" title="小说"></i-tab>
+    <i-tab key="7" title="杂志"></i-tab>
+    <i-tab key="2" title="名著"></i-tab>
+  </i-tabs>
+</view>
+<view class='bookList'>
+  <scroll-view scroll-y="true" style='height:100%;'>
+    <view class='bookList_view' wx:for="{{bookList}}" wx:key="{{item}}" wx:for-index="key" id='{{key}}' bindtap='gotoInfo'>
+      <view class='left'>
+        <image class='bookImg' src='{{item.bookimg}}'></image>
+      </view>
+      <view class='mid'>
+        <view class='bookName'><text>{{item.bookname}}</text></view>
+        <view class='bookPrice'><text>{{item.bookprice}}元</text></view>
+        <view class='bookIntro'><text>{{item.comment}}</text></view>
+      </view>
+      
+    </view>
+    <i-load-more tip="暂无更多数据" loading="{{ false }}" />
+  </scroll-view>
+</view>
+

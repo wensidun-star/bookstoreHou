@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-icon": "../../dist/icon/index",
+    "i-modal": "../../dist/modal/index",
+    "i-input": "../../dist/input/index"
+  },
+  "navigationBarTitleText": "淘书"
+}
